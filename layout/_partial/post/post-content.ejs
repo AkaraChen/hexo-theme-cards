@@ -1,13 +1,19 @@
 <% page.cover = false; %>
 
 <div class="post-title">
-    <h1 class="post-title__text">
-        <%= page.title || theme.meta.title %>
-    </h1>
+    <div class="cover">
+        <div class="cover__logo">
+            <h1><%= page.title || theme.meta.title %></h1>
+        </div>
+        <div class="cover__intro">
+            <p> <%- partial('_meta/date') %>
+                <%- partial('_meta/categories') %> 
+                <%- partial('_plugins/statistics/index', {position: 'page'}) %> 
+            </p>
+        </div>
+    </div>
     <div class="post-title__meta">
-        <%- partial('_meta/date') %>
-        <%- partial('_meta/categories') %> 
-        <%- partial('_plugins/statistics/index', {position: 'page'}) %> 
+
     </div>
 </div>
 
