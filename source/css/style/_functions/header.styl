@@ -12,6 +12,7 @@
     padding 0 calc(var(--space)/2)
     top 0
     z-index 10
+    border-bottom 1px solid #e1e4e8 !important
 
     .header__left
     .header__right
@@ -26,9 +27,10 @@
     .header__left
     
         .logo__text
-            font-size 18px
+            font-size 20px
             padding 16px 10px 16px 10px
             border-radius 5px
+            font-family Titillium Web !important
 
     .header__right
     
@@ -45,11 +47,12 @@
 
         #btn-search
         #btn-toggle-dark
-            padding 16px 10px 16px 10px
+            padding 0 10px
+            display flex !important
 
         .dropdown-icon
             display none
-            padding 16px 10px 16px 10px
+            padding 0 10px
             border 0 !important
             background-color transparent
 
@@ -116,5 +119,5 @@ if (hexo-config('navbar.sticky'))
         display none !important
     
     .dropdown-icon
-        display block !important
+        display flex !important
 

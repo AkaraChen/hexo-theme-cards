@@ -1,5 +1,10 @@
 <% if (site.posts && site.posts.length > 0) { %>
     <% if (page.layout == 'tag') { %>
+        <div class="cover">
+            <div class="cover__logo">
+                <h1>Tags</h1>
+            </div>
+        </div>
         <main class="main tagscloud">
             <%- tagcloud({
                 min_font: 16, 
@@ -23,6 +28,12 @@
             }
         </style>
     <% } else { %>
+        <div class="cover">
+            <div class="cover__logo">
+                <h1 id="title">Tags</h1>
+            </div>
+        </div>
+        <script>document.getElementById("title").innerHTML="标签："+decodeURI(window.location.pathname).slice(6,-1)</script>
         <main class="main">
             <%- partial('_partial/post/post-list') %>
         </main>

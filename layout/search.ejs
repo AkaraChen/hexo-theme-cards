@@ -1,2 +1,11 @@
 <% page.comments = false; %>
+<div class="cover">
+    <div class="cover__logo">
+        <h1 id="title">Search</h1>
+    </div>
+</div>
 <%- partial('_pages/search') %>
+<% page.cover = false; %>
+<script>
+document.title = "搜索";
+</script>

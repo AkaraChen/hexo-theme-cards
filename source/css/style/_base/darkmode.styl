@@ -1,4 +1,5 @@
 @media (prefers-color-scheme: dark)
+
     :root
         --color-mode 'dark'
 
@@ -80,12 +81,14 @@
         tr:not(.code):not(.gutter):nth-child(2n)
             background-color #272727
 
-
     .content-card
         border 1px solid rgba(255,255,255,0.1)
 
     .header
         border-bottom 1px solid rgba(255,255,255,0.1) !important
+
+        & *
+            color var(--title-color)
 
     #b2t
         border 1px solid rgba(255,255,255,0.1) 

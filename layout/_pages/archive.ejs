@@ -1,7 +1,20 @@
 <main class='main'>
     <% if (page.year || page.month) { %>
+        <div class="cover">
+            <div class="cover__logo">
+                <h1 id="title">Archive</h1>
+            </div>
+        </div>
+        <script>
+            document.getElementById("title").innerHTML="归档："+decodeURI(window.location.pathname).slice(10,-1)
+        </script>
 		<%- partial('_partial/post/post-list') %>
 	<% } else { %>
+        <div class="cover">
+            <div class="cover__logo">
+                <h1>Archive</h1>
+            </div>
+        </div>
         <div class="archives">
             <%
             var yr = -1, pd = -1;

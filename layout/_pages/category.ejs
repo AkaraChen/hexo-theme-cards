@@ -1,3 +1,11 @@
+<div class="cover">
+    <div class="cover__logo">
+        <h1 id="title">Links</h1>
+    </div>
+</div>
+<script>
+    document.getElementById("title").innerHTML="分类："+decodeURI(window.location.pathname).slice(12,-1)
+</script>
 <main class="main">
     <% if (site.posts && site.posts.length > 0) { %>
         <% if (page.layout === 'category') { %>
